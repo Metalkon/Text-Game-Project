@@ -1,0 +1,10 @@
+{
+    "name": "Goblin",
+    "hitpoints": 20,
+    "attack": 5,
+    "defense": 5,
+    "magic": 5,
+    "speed": 5,
+    "weakness": light
+    "moves": ["melee"]
+}
