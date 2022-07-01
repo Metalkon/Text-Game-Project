@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Media;
 
 
 namespace Text_Game_Project
@@ -15,7 +14,7 @@ namespace Text_Game_Project
 
         static void Main()
         {
-            Fighter player = new Fighter();
+            Fighter player = new Fighter(); //temp
             ConsoleHelper.SetCurrentFont("Consolas", 20); Console.Clear();
             Game myGame = new Game();
             myGame.Start();
