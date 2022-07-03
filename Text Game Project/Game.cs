@@ -8,56 +8,29 @@ using static System.Console;
 
 namespace Text_Game_Project
 {
-    internal class Game
+    public static class Game
     {
-        public void Start()
+        public static Fighter ChooseFighter()
         {
             Title = "Battle Game";
-            RunMainMenu();
+            string prompt = "Welcome to Battle Game, Choose Your Fighter!";
 
-            WriteLine("Press any key to continue");
-            ReadKey(true);
-        }
-
-        private void RunMainMenu()
-        {
-            string prompt = @"
-██████   █████  ████████ ████████ ██      ███████      ██████   █████  ███    ███ ███████ 
-██   ██ ██   ██    ██       ██    ██      ██          ██       ██   ██ ████  ████ ██      
-██████  ███████    ██       ██    ██      █████       ██   ███ ███████ ██ ████ ██ █████   
-██   ██ ██   ██    ██       ██    ██      ██          ██    ██ ██   ██ ██  ██  ██ ██      
-██████  ██   ██    ██       ██    ███████ ███████      ██████  ██   ██ ██      ██ ███████ 
-                                                                                                                                                                                    
-Welcome to Battle Game, Choose Your Class!";
             string[] options = { "Warrior", "Archer", "Wizard" };
-            Menu mainMenu = new Menu(prompt, options);
-            int selectedIndex = mainMenu.Run();
-
+            Menu fighterSelection = new Menu(prompt, options);
+            int selectedIndex = fighterSelection.Run();
+        
             switch (selectedIndex)
             {
                 case 0:
-                    ChoiceWarrior();
-                    break;
+                    return Fighter.ChooseWarrior(); 
                 case 1:
-                    ChoiceArcher();
-                    break;
+                    return Fighter.ChooseArcher();
                 case 2:
-                    ChoiceWizard();
-                    break;
+                    return Fighter.ChooseWizard();
+                default:
+                    return Fighter.ChooseWarrior();
             }
-        }
 
-        public static void ChoiceWarrior()
-        {
-            Fighter player = Fighter.CreateWarrior();
-        }
-        public static void ChoiceArcher()
-        {
-            Fighter player = Fighter.CreateArcher();
-        }
-        public static void ChoiceWizard()
-        {
-            Fighter player = Fighter.CreateWizard();
         }
     }
 }

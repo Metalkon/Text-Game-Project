@@ -9,6 +9,14 @@ namespace Text_Game_Project
 {
     internal class Menu
     {
+        public string gameTitle = @"
+██████   █████  ████████ ████████ ██      ███████      ██████   █████  ███    ███ ███████ 
+██   ██ ██   ██    ██       ██    ██      ██          ██       ██   ██ ████  ████ ██      
+██████  ███████    ██       ██    ██      █████       ██   ███ ███████ ██ ████ ██ █████   
+██   ██ ██   ██    ██       ██    ██      ██          ██    ██ ██   ██ ██  ██  ██ ██      
+██████  ██   ██    ██       ██    ███████ ███████      ██████  ██   ██ ██      ██ ███████ 
+
+";
         private int SelectedIndex;
         private string[] Options;
         private string Prompt;
@@ -23,7 +31,7 @@ namespace Text_Game_Project
         private void DisplayOptions()
         {
             //Show Prompt Message, Options, and Highlight.
-            WriteLine(Prompt);
+            WriteLine(gameTitle + Prompt);
             for (int i = 0; i < Options.Length; i++)
             {
                 string currentOption = Options[i];
