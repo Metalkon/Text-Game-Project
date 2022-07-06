@@ -9,11 +9,27 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Windows.Extensions" Version="6.0.0" />
+    <Compile Remove="SFX\NewFolder\**" />
+    <EmbeddedResource Remove="SFX\NewFolder\**" />
+    <None Remove="SFX\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="SFX\" />
+    <None Remove="SFX\Battle.wav" />
+    <None Remove="SFX\Menu.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="SFX\Battle.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SFX\Menu.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Windows.Extensions" Version="6.0.0" />
   </ItemGroup>
 
 </Project>

@@ -69,6 +69,7 @@ namespace Text_Game_Project
                 // Update SelectedIndex based on arrow keys pressed.
                 if (keyPressed == ConsoleKey.UpArrow)
                 {
+                    Beep();
                     SelectedIndex--;
                     if (SelectedIndex == -1)
                     {
@@ -77,6 +78,7 @@ namespace Text_Game_Project
                 }
                 else if (keyPressed == ConsoleKey.DownArrow)
                 {
+                    Beep();
                     SelectedIndex++;
                     if (SelectedIndex == Options.Length)
                     {

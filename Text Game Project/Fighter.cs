@@ -11,6 +11,7 @@ namespace Text_Game_Project
         public string Name { get; set; }
         public int Level { get; set; }
         public int Exp { get; set; }
+        public double MaxHealth { get; set; }
         public double Health { get; set; }
         public double Damage { get; set; }
         public double Armor { get; set; }
@@ -23,6 +24,7 @@ namespace Text_Game_Project
                 Name = "Warrior",
                 Level = 1,
                 Exp = 0,
+                MaxHealth = 35,
                 Health = 35,
                 Damage = 5,
                 Armor = 0.3,
@@ -37,6 +39,7 @@ namespace Text_Game_Project
                 Name = "Archer",
                 Level = 1,
                 Exp = 0,
+                MaxHealth = 25,
                 Health = 25,
                 Damage = 7,
                 Armor = 0.2,
@@ -51,6 +54,7 @@ namespace Text_Game_Project
                 Name = "Wizard",
                 Level = 1,
                 Exp = 0,
+                MaxHealth = 25,
                 Health = 25,
                 Damage = 10,
                 Armor = 0.1,
